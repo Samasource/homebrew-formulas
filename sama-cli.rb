@@ -5,24 +5,25 @@
 class SamaCli < Formula
   desc "This is the Sama CLI, a command-line tool for using the Sama Data API."
   homepage "https://github.com/Samasource/homebrew-formulas"
-  version "1.9.0"
+  version "1.10.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "http://github.com/Samasource/sama-cli/releases/download/v1.9.0/sama-cli_1.9.0_darwin_x86_64.tar.gz"
-    sha256 "4b3066705b7e3e81d4b397f71576a2dfc5701b3b8cbef47873ea5f11860f435f"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "http://github.com/Samasource/sama-cli/releases/download/v1.10.0/sama-cli_1.10.0_darwin_x86_64.tar.gz"
+      sha256 "a6aececeef7e6db3771256137f52231abff57302a9fc1359361f221a1605d76f"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "http://github.com/Samasource/sama-cli/releases/download/v1.9.0/sama-cli_1.9.0_darwin_arm64.tar.gz"
-    sha256 "d5903ef4dbdc1c384e7e2ae776d1d62aeef45a64033fde5e56841f931e071b88"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "http://github.com/Samasource/sama-cli/releases/download/v1.9.0/sama-cli_1.9.0_linux_x86_64.tar.gz"
-    sha256 "40caaea89f0b8feafacd8330775f5a0e6d4f2850db54ea180802c8b8bc46db9e"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "http://github.com/Samasource/sama-cli/releases/download/v1.9.0/sama-cli_1.9.0_linux_arm64.tar.gz"
-    sha256 "2604d3d39a64278e4a98aac6af54eb42f55cedfe75303c589b067651befe9a2e"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "http://github.com/Samasource/sama-cli/releases/download/v1.10.0/sama-cli_1.10.0_linux_x86_64.tar.gz"
+      sha256 "b26af2dd95db5f84cec15c27d02d293c19c5a53459cd9bf3fa965fdbb97d754f"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "http://github.com/Samasource/sama-cli/releases/download/v1.10.0/sama-cli_1.10.0_linux_arm64.tar.gz"
+      sha256 "cf72845d278318bc421b7a41afcfcfd48e8a3ccd7d1f1cfb48608a0dbab3f5d9"
+    end
   end
 
   def install
