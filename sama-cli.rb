@@ -5,20 +5,20 @@
 class SamaCli < Formula
   desc "This is the Sama CLI, a command-line tool for using the Sama Data API."
   homepage "https://github.com/Samasource/homebrew-formulas"
-  version "1.12.2"
+  version "1.13.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "http://github.com/Samasource/sama-cli/releases/download/v1.12.2/sama-cli_1.12.2_darwin_arm64.tar.gz"
-      sha256 "6377bbef0c3882f1f1b82c3ade053cce77470f59d93b4cf72aa57b0ac635986a"
+      url "http://github.com/Samasource/sama-cli/releases/download/v1.13.0/sama-cli_1.13.0_darwin_arm64.tar.gz"
+      sha256 "4dae4092ad24bb03bd323bdf7632a1e0acc1d8a4a9ea8f994a65e19096ef2fa8"
 
       def install
         bin.install "sama"
       end
     end
     if Hardware::CPU.intel?
-      url "http://github.com/Samasource/sama-cli/releases/download/v1.12.2/sama-cli_1.12.2_darwin_x86_64.tar.gz"
-      sha256 "e00b7920bf77aff86e61eb8cd7a36efbf683c5e186be1e6c24d1c408a716bd0e"
+      url "http://github.com/Samasource/sama-cli/releases/download/v1.13.0/sama-cli_1.13.0_darwin_x86_64.tar.gz"
+      sha256 "eda7d4caf1f9f737847e406c4e40af12a8bd921116a44bf16010f8558bd5a5c6"
 
       def install
         bin.install "sama"
@@ -28,16 +28,16 @@ class SamaCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "http://github.com/Samasource/sama-cli/releases/download/v1.12.2/sama-cli_1.12.2_linux_arm64.tar.gz"
-      sha256 "5e4cc13e89b51ed31c68a1c4dde486f2fd27a227460134eac5e5c4d99512cef0"
+      url "http://github.com/Samasource/sama-cli/releases/download/v1.13.0/sama-cli_1.13.0_linux_arm64.tar.gz"
+      sha256 "2fe0b6bde925b58cec0cdbf01aefbbbf042532727158fc9e87a8b38bd65f7379"
 
       def install
         bin.install "sama"
       end
     end
     if Hardware::CPU.intel?
-      url "http://github.com/Samasource/sama-cli/releases/download/v1.12.2/sama-cli_1.12.2_linux_x86_64.tar.gz"
-      sha256 "78031251f81ae49d52d6e9931ddc9a198034299398c418cb77e8b6ed43c039b0"
+      url "http://github.com/Samasource/sama-cli/releases/download/v1.13.0/sama-cli_1.13.0_linux_x86_64.tar.gz"
+      sha256 "4616de610fd95f78575ecb62c09ab6a1d67f7108039853546f5dba80bee468f6"
 
       def install
         bin.install "sama"
